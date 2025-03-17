@@ -1,0 +1,331 @@
+body {
+    background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#heading {
+    color: white;
+    padding: 20px;
+    font-size: 10em;
+    margin-top: 180px;
+    animation: fadeIn 1.5s ease-out;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#description {
+    color: white;
+    font-size: 2em;
+    margin-top: -50px;
+    animation: fadeIn 1.5s ease-out 0.3s both;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+#descrip {
+    color: white;
+    font-size: 1.2em;
+    font-style: italic;
+    animation: fadeIn 1.5s ease-out 0.6s both;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: inline-block;
+}
+
+#box1 {
+    position: relative;
+    width: 1000px;
+    height: 2400px;
+    background-color: white;
+    margin-bottom: 100px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#strip {
+    position: absolute;
+    width: 850px;
+    height: 60px;
+    background: linear-gradient(135deg, #295f81, #53849a, #b1bfc4);
+    right: 0px;
+    border-radius: 0 0 0 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#git, #lin {
+    font-size: 1.5em;
+    color: white;
+    position: absolute;
+    top: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#git {
+    right: 20px;
+}
+
+#lin {
+    right: 60px;
+}
+
+#git:hover, #lin:hover {
+    color: #f0f0f0;
+    transform: scale(1.2);
+}
+
+#projects {
+    font-size: 1.5em;
+    color: #295f81;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid #295f81;
+    padding-bottom: 5px;
+}
+
+#p1t, #p2t, #p3t, #p4t {
+    color: #295f81;
+    font-weight: bold;
+}
+
+#p1t {
+    font-size: 2em;
+    position: absolute;
+    top: 200px;
+    right: 230px;
+}
+
+#p1d {
+    font-style: italic;
+    font-size: 1em;
+    color: #444;
+    position: absolute;
+    top: 300px;
+    right: 220px;
+}
+
+#p1i, #p2i, #p3i, #p4i {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#p1i {
+    width: 500px;
+    height: 250px;
+    background-image: url(images/Imp-mental-health-scaled.webp);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 370px;
+    right: 250px;
+}
+
+#p1i:hover, #p2i:hover, #p3i:hover, #p4i:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background-color: #295f81;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #3a7ca5;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#p1b {
+    position: absolute;
+    top: 640px;
+    right: 425px;
+}
+
+.box {
+    width: 1000px;
+    height: 400px;
+    border-style: solid;
+    border-color: #e0e0e0;
+    border-width: 1px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#b1 {
+    position: absolute;
+    top: 800px;
+}
+
+#p2i {
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 70px;
+    right: 480px;
+    background-image: url(images/getty_539953664_213316.webp);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#p2t {
+    font-size: 1.5em;
+    position: absolute;
+    top: 55px;
+    right: 40px;
+    text-align: left;
+}
+
+#p2d {
+    font-size: 1em;
+    color: #444;
+    font-style: italic;
+    position: absolute;
+    top: 150px;
+    right: 40px;
+    text-align: left;
+}
+
+#p2b {
+    position: absolute;
+    top: 250px;
+    right: 350px;
+}
+
+#b2 {
+    position: absolute;
+    top: 1300px;
+}
+
+#p3i {
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 70px;
+    right: 480px;
+    background-image: url(images/sales-forecast.webp);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#p3t {
+    font-size: 1.5em;
+    position: absolute;
+    top: 55px;
+    right: 210px;
+}
+
+#p3d {
+    font-size: 1em;
+    color: #444;
+    font-style: italic;
+    position: absolute;
+    top: 120px;
+    right: 25px;
+    text-align: left;
+}
+
+#p3b {
+    position: absolute;
+    top: 225px;
+    right: 350px;
+}
+
+#b3 {
+    position: absolute;
+    top: 1800px;
+}
+
+#p4i {
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 70px;
+    right: 480px;
+    background-image: url(images/stratford.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#p4t {
+    font-size: 1.5em;
+    position: absolute;
+    top: 55px;
+    right: 20px;
+    text-align: left;
+}
+
+#p4d {
+    font-size: 1em;
+    color: #444;
+    font-style: italic;
+    position: absolute;
+    top: 120px;
+    right: 20px;
+    text-align: left;
+}
+
+#p4b {
+    position: absolute;
+    top: 225px;
+    right: 350px;
+}
+
+#foot {
+    height: 60px;
+    background: linear-gradient(135deg, #4788a4, #74b1c6, #e2e7e8);
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Base state for elements before animation */
+
+
+#foot p {
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+#foot b {
+    color: #0F2027;
+}
+
