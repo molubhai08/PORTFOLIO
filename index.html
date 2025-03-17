@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>First Web Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1bcd3f6873.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 id="heading">Sarthak</h1>
+    <h2 id="description">Portfolio Site</h2>
+    <p id="descrip">Data Analyst well versed in SQL, Python, Excel, Power BI</p>
+    <div id="box1"><div id="strip">
+        <a id="git" href="https://github.com/molubhai08"><i class="fa-brands fa-github fa-1x"></i></a>
+        <a id="lin" href="https://www.linkedin.com/in/sarthak-5272b32b2/"><i class="fa-brands fa-linkedin"></i></a></div>
+        <h2 id="projects">Projects</h2>
+        <h1 id="p1t">Mental Health Trends Analysis <br>Power BI Dashboard & Time Series</h1>
+        <p id="p1d">This project analyzes global mental health disorder trends using Python <br>for data cleaning and time series analysis, visualized in a Power BI dashboard.</p>
+        <a href="https://github.com/molubhai08/Mental-Health-Trends-Analysis-Power-BI-Dashboard-Time-Series"><div id="p1i"></div></a>
+        <a href="https://github.com/molubhai08/Mental-Health-Trends-Analysis-Power-BI-Dashboard-Time-Series"><button id="p1b">View Project</button></a>
+        <div class="box" id="b1">
+            <a href="https://github.com/molubhai08/Power-BI-Sales-Dashboard-with-Data-Cleaning-in-Python"><div id="p2i"></div></a>
+            <h1 id="p2t">Sales Dashboard with Data Cleaning <br> in Python</h1>
+            <p id="p2d">A Power BI dashboard analyzing sales data, cleaned using<br> Python for accurate insights into trends, revenue, and <br>performance metrics.</p>
+            <a href="https://github.com/molubhai08/Power-BI-Sales-Dashboard-with-Data-Cleaning-in-Python"><button id="p2b">View Project</button></a>
+        </div>
+        <div class="box" id="b2">
+            <a href="https://github.com/molubhai08/Campfly-Sales-Report"><div id="p3i"></div></a>
+            <h1 id="p3t">Campfly Sales Report</h1>
+            <p id="p3d">A Power BI dashboard analyzing sales trends, customer <br>insights, and product performance, with data cleaned<br> and optimized in Python for accuracy and better visualization.</p>
+            <a href="https://github.com/molubhai08/Campfly-Sales-Report"><button id="p3b">View Project</button></a>
+        </div>
+        <div class="box" id="b3">
+            <a href="https://github.com/molubhai08/Used-Car-Analysis-Using-Python-and-PowerBi"><div id="p4i"></div></a>
+            <h1 id="p4t">Used Car Sales Analysis Using Python <br>and PowerBi</h1>
+            <p id="p4d">Performed data cleaning and outlier detection using Python, <br> then built a Power BI dashboard with DAX-generated columns <br>for insights.</p>
+            <a href="https://github.com/molubhai08/Used-Car-Analysis-Using-Python-and-PowerBi"><button id="p4b">View Project</button></a>
+        </div>
+    </div>
+    <div id="foot"><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Name:</b> Sarthak &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>E-Mail:</b> sarthak.molu08@gmail.com</p></div>
+    
+    <script>
+        // First, remove the existing animation styles for the elements
+        document.getElementById('heading').style.animation = 'none';
+        document.getElementById('description').style.animation = 'none';
+        document.getElementById('descrip').style.animation = 'none';
+        
+        // Then, add a class to initially hide the elements
+        document.getElementById('heading').style.opacity = '0';
+        document.getElementById('description').style.opacity = '0';
+        document.getElementById('descrip').style.opacity = '0';
+        
+        // Create the Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // If the element is in view
+                if (entry.isIntersecting) {
+                    // Add the animation
+                    if (entry.target.id === 'heading') {
+                        entry.target.style.animation = 'fadeIn 1.5s ease-out forwards';
+                    } else if (entry.target.id === 'description') {
+                        entry.target.style.animation = 'fadeIn 1.5s ease-out 0.3s forwards';
+                    } else if (entry.target.id === 'descrip') {
+                        entry.target.style.animation = 'fadeIn 1.5s ease-out 0.6s forwards';
+                    }
+                    
+                    // Stop observing the element after it's been animated
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 }); // Trigger when at least 10% of the element is visible
+        
+        // Start observing the elements
+        observer.observe(document.getElementById('heading'));
+        observer.observe(document.getElementById('description'));
+        observer.observe(document.getElementById('descrip'));
+        
+        // Add scroll event listener to reset animations when scrolling back to top
+        window.addEventListener('scroll', function() {
+            if (window.scrollY === 0) {
+                // Reset animations when back at the top
+                const elements = [
+                    document.getElementById('heading'),
+                    document.getElementById('description'),
+                    document.getElementById('descrip')
+                ];
+                
+                elements.forEach(element => {
+                    element.style.opacity = '0';
+                    element.style.animation = 'none';
+                    observer.observe(element);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
